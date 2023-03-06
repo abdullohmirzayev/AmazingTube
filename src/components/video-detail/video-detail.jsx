@@ -5,7 +5,6 @@ import { ApiService } from "../../service/api.service";
 import ReactPlayer from "react-player";
 import { CheckCircle, FavoriteOutlined, MarkChatRead, Tag, Visibility,} from "@mui/icons-material";
 import { Loader, Videos } from "../";
-import renderHTML from "react-render-html";
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -55,7 +54,7 @@ const VideoDetail = () => {
             {videoDetail.snippet.title}
           </Typography>
           <Typography variant="subtitle2" p={2} sx={{ opacity: ".7" }}>
-            {renderHTML(videoDetail?.snippet?.description)}
+            {videoDetail?.snippet?.description}
           </Typography>
 
           <Stack direction={"row"} gap="20px" alignItems="center" py={1} px={2}>
